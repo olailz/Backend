@@ -1,25 +1,23 @@
 package com.example.m4modelo;
 
-
 import java.sql.Date;
+import java.time.LocalDate;
 import java.time.LocalTime;
-
 import com.example.m1.modelo.Patient;
 import com.example.m3modelo.Medico;
-import com.example.m5modelo.Room;
+import com.example.m6modelo.Room;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-
 
 @Entity
 @Table(name = "appoiment")
@@ -30,20 +28,30 @@ public class Appoiment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idcitamedica;
+    @Column(name="id_appointment")
+    private Long idappoiment;
 
-    @OneToMany(mappedBy = "id_patient")
+    @ManyToOne
+    @JoinColumn(name = "id_patient")
     private Patient idpatient;
 
-    @OneToMany(mappedBy = "id_doctor")
+    @ManyToOne
+    @JoinColumn( name="id_doctor")
     private Medico iddoctor;
 
-    @OneToMany(mappedBy = "id_room")
+    @ManyToOne
+    @JoinColumn(name = "id_room")
     private Room idroom;
 
+    @Column(name="date_appointment")
     private Date dateappoiment;
-    private LocalTime appoimenttime;
-    private String status;
-    private String observacion;
 
+    @Column(name="appointment_time")
+    private LocalTime appoimenttime;
+
+    @Column(name="status")
+    private String status;
+
+    @Column(name="observacion")
+    private String observacion;
 }

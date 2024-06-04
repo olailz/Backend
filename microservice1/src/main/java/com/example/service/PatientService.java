@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 import com.example.m1.modelo.Patient;
 import com.example.m1repository.PatientRepository;
 
-import jakarta.transaction.Transactional;
-
 @Service
 public class PatientService {
 

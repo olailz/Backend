@@ -12,7 +12,9 @@
     <groupId>com.example</groupId>
     <artifactId>microservice4</artifactId>
     <version>1.0-SNAPSHOT</version>
-<dependencies>
+
+
+ <dependencies>
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>microservice1</artifactId>
@@ -25,14 +27,14 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-         <dependency>
+        <dependency>
             <groupId>com.example</groupId>
-            <artifactId>microservice5</artifactId>
+            <artifactId>microservice6</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    <properties>
+   <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>

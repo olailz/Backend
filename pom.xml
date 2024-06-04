@@ -20,6 +20,9 @@
 		<module>microservice4</module>
 		<module>microservice5</module>
 		<module>microservice6</module>
+		<module>microservice7</module>
+		<module>microservice2</module>
+		<module>microservice8</module>
 	</modules>
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>

@@ -10,16 +10,17 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>microservice6</artifactId>
+    <artifactId>microservice7</artifactId>
     <version>1.0-SNAPSHOT</version>
- <dependencies>
+<dependencies>
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>microservice1</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-    </dependencies>
+    </dependencies> 
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
